@@ -49,3 +49,5 @@ def verificar_perfeito(numero):
 numero = float(input("digite um numero pra saber se ele é perfeito: "))
 resultado = verificar_perfeito(numero)
 print(resultado)
+
+# pesquisar: Funções de string e funções da math
