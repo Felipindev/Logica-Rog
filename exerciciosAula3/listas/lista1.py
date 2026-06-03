@@ -61,3 +61,37 @@ numeros = [1,2,3,4,5]
 print(max(numeros)) #retornar valor maximo
 print(min(numeros)) #valor minimo
 print(sum(numeros)) #retorna a soma dos elemento
+print(len(numeros)) #retorna o tamanho da lista
+
+cars = ["bmw", "audi", "toyota", "honda"]
+cars.sort() #ordena por ordem alfabetica (maisculos primeiros) na própria lista
+numeros.sort()
+print(cars)
+print(numeros)
+
+cars.sort(reverse=True) #ordena em ordem decrescente tudo e salva na propria lista
+numeros.sort(reverse=True) #ordena em ordem decrescente tudo
+print(cars)
+print(numeros)
+
+print(sorted(cars)) #ordena só pra visualização (nao salva certin)
+
+cars.reverse() #só inverte a ordem da lista
+print(cars)
+
+lista = list(range(2, 11, 2)) #cria uma lista começanod do dois, até o 11, indo de 2 em 2
+# output: [2, 4, 6, 8, 10]
+
+squares = []
+
+for i in range(1, 11):
+    valor = i**2
+    squares.append(valor)
+print(squares)
+
+squares = [value**2 for value in range(1,11)] #mema coisa
+
+cars = ["bmw", "audi", "toyota", "honda"]
+print(cars[0:3]) #printa do indice 0 até pegar 3 elementos
+print(cars[2:]) #printa do indice 2 até o ultimo
+print(cars[:3]) #printa todo mundo do começo até ter 3 elementos
