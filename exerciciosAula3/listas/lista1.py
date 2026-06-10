@@ -1,23 +1,23 @@
-# notas = [0, 0, 0, 0] #os itens sao separados por virgula
-# qtd_alunos = 4
+notas = [0, 0, 0, 0] #os itens sao separados por virgula
+qtd_alunos = 4
 
-# for i in range(qtd_alunos):
-#     notas[i] = float(input(f"informe a nota do aluno {i + 1}: "))
+for i in range(qtd_alunos):
+    notas[i] = float(input(f"informe a nota do aluno {i + 1}: "))
 
-# print(notas)
-# soma_notas = 0
-# for i in range(qtd_alunos):
-#     soma_notas += notas[i]
+print(notas)
+soma_notas = 0
+for i in range(qtd_alunos):
+    soma_notas += notas[i]
 
-# media_turma = soma_notas / qtd_alunos
-# print(f"A media da turma é: {media_turma:.2f}")
+media_turma = soma_notas / qtd_alunos
+print(f"A media da turma é: {media_turma:.2f}")
 
-# alunos_acima = 0
-# for i in range(qtd_alunos):
-#     if notas[i] >= media_turma:
-#         alunos_acima += 1
+alunos_acima = 0
+for i in range(qtd_alunos):
+    if notas[i] >= media_turma:
+        alunos_acima += 1
 
-# print(f"Quantidade de alunos acima da media: {alunos_acima}")
+print(f"Quantidade de alunos acima da media: {alunos_acima}")
 
 # lista vazia
 carrinho =[]
@@ -95,3 +95,28 @@ cars = ["bmw", "audi", "toyota", "honda"]
 print(cars[0:3]) #printa do indice 0 até pegar 3 elementos
 print(cars[2:]) #printa do indice 2 até o ultimo
 print(cars[:3]) #printa todo mundo do começo até ter 3 elementos
+
+#altera a lista original
+def processar_numeros(lista):
+    for i in range(len(lista)):
+        lista[i] += 2
+    return lista  #ele ja muda na lista original então nem precisaria
+
+lista_original = [1,2,3,4]
+print(lista_original)
+resultado = processar_numeros(lista_original)
+
+print(resultado)
+print(lista_original)
+
+#preserva a lista original (não altera seu valor)
+def inverter_valores(lista):
+    lista.reverse()
+    return lista #tem que ter return pq ele não altera a lista original
+
+lista_original = [10, 20, 30]
+print(lista_original)
+resultado = inverter_valores(lista_original[:]) #passa uma cópia da lista
+
+print(resultado)
+print(lista_original)
